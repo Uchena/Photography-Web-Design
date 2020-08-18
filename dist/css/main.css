@@ -1,0 +1,233 @@
+/* defaults and reset */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Almondita;
+    src: url(/dist/fonts/Almondita.ttf);
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    background-color: #eee;
+    line-height: 2rem;
+}
+
+h1, h3, a {
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    color: #333;
+}
+p, h2{
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    text-transform: uppercase;
+}
+.nav__signature {
+    font-family: 'Almondita', cursive;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.884);
+    cursor: pointer;
+}
+img {
+    display: block;
+    width: 100%;
+}
+section {
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+    -30px 0px 40px rgba(0, 0, 0, 0.1);
+}
+.--active {
+    font-size: 1.2rem;
+    color: #29c7ac;
+    border-bottom: 1px solid #eee;
+}
+/* defaults and reset END */
+/* # INTRODUCTION */
+
+.landing__content {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.heading {
+    color: #54123b;
+}
+.subheading {
+    color: #888;
+    font-size: .9rem;
+}
+.landing__image {
+    background: url(/dist/images/camera.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+}
+.button {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #54123b;
+    transition: background 3s ease;
+}
+.button:hover {
+    background: #29c7ad5b;
+}
+
+/* Screen Sizes 500px and Up */
+@media (min-width: 500px) {
+    .landing {
+      display: flex;
+      height: 100%;
+    }
+  
+    .landing__content {
+      height: 100vh;
+    }
+  
+    .landing__image {
+      height: 100vh;
+    }
+  }
+/* # NAVIGATION */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    padding: .8rem .8rem;
+    background-color: #84142d;
+}
+.nav__list {
+    list-style-type: none;
+}
+.nav__item {
+    display: inline-block;
+    margin-right: 2rem;
+    text-transform: uppercase;
+}
+.nav__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.884);
+    transition: ease 200ms;
+}
+.nav__link:hover {
+    font-size: 1.2rem;
+    color: #29c7ac;
+    border-bottom: 1px solid #eee;
+}
+@media screen and (max-width: 500px) {
+    .navigation {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav__signature {
+        text-align: center;
+    }
+    .nav__item {
+        margin-right: .5rem;
+        font-size: .9rem;
+    }
+}
+/* # BOTTOM FOOTER */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+    background-color: #29c7ad5b;
+}
+.footer {
+    background: url(/dist/images/whiteBG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer__content h3 {
+    font-size: 2.1rem;
+    color: #54123b;
+}
+/* PAGE 2 */
+/* # ABOUT and CONTACT */
+.container {
+    padding: 3rem 2rem 2rem 2rem;
+}
+/* image */
+.profile__container {
+    width: 250px;
+    height: 170px;
+}
+.profile__container img {
+    height: 100%;
+    width: 100%;
+}
+/* FORM */
+input {
+    width: 32%;
+}
+form input[type="submit"] {
+    width: 20%;
+}
+.frmbtn {
+    margin: 0;
+}
+@media screen and (max-width: 500px) {
+    form input[type="submit"] {
+        width: 65%;
+        border-radius: .3rem;
+    }
+}
+/* PAGE 3 */
+/* Images Responsive */
+.images__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.images__column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  .images__column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .images__column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .images__column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
